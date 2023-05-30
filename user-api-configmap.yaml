@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-user-api-data
+data:
+  data.csv: |-
+    {{ readFile "data.csv" }}
+

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-user-api
+  labels:
+    app: node-user-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-user-api
+  template:
+    metadata:
+      labels:
+        app: node-user-api
+    spec:
+      containers:
+        - name: node-user-api
+          image: shazam007/node-user-api
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"
+          volumeMounts:
+            - name: data-volume
+              mountPath: /app/data.csv
+              subPath: data.csv
+      volumes:
+        - name: data-volume
+          configMap:
+            name: node-user-api-data
+            items:
+              - key: data.csv
+                path: data.csv
