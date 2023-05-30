@@ -14,11 +14,11 @@ Getting Started:
    1. Clone the repository: https://github.com/sksabir019/Cloud-Operations-Engineer-Assessments.git
 
    2. Build the Docker image: 
-   docker build -t your-docker-repo/node-user-api:latest . 
+        docker build -t your-docker-repo/node-user-api:latest . 
    (Replace your-docker-repo with your actual Docker repository URL.)
     
    3. Push the Docker image to your repository:
-     docker push your-docker-repo/node-user-api:latest 
+       docker push your-docker-repo/node-user-api:latest 
     (Replace your-docker-repo with your actual Docker repository URL.)
 
             [or Pull the image from docker hub]:
@@ -47,10 +47,10 @@ Getting Started:
     6. Access the application: 
         kubectl get service user-api
 
-API Endpoints:
-    - GET /v1/users: Retrieve a list of users.
-    - POST /v1/users: Create a new user.
-    - GET /v1/users/:userId: Retrieve a user by ID.
+    API Endpoints:
+        - GET /v1/users: Retrieve a list of users.
+        - POST /v1/users: Create a new user.
+        - GET /v1/users/:userId: Retrieve a user by ID.
 
-Customization:
-    You can modify the data.csv file to change or add user data. After updating the file, run the Job again to load the new data into the application.
+    Customization:
+        You can modify the data.csv file to change or add user data. After updating the file, run the Job again to load the new data into the application.
