@@ -45,7 +45,7 @@ Getting Started:
         Ensure that all the pods are running and the load-data-job completes successfully.
 
     6. Access the application: 
-        kubectl get service user-api
+        kubectl get service node-user-api
 
     API Endpoints:
         - GET /v1/users: Retrieve a list of users.
